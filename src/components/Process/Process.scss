@@ -1,0 +1,307 @@
+.process {
+    position: relative;
+  
+    padding: 120px 0;
+  
+    background: #101b3c;
+  
+    color: #f7f8f4;
+  
+    .container {
+      width: 100%;
+      max-width: 1240px;
+  
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+  
+    // =================================
+    // EYEBROW
+    // =================================
+  
+    .eyebrow {
+      display: inline-flex;
+  
+      align-items: center;
+  
+      gap: 12px;
+  
+      color: #c6f135;
+  
+      font-family: "IBM Plex Mono", monospace;
+  
+      font-size: 12px;
+  
+      font-weight: 500;
+  
+      letter-spacing: 0.28em;
+  
+      text-transform: uppercase;
+  
+      &::before {
+        content: "";
+  
+        width: 22px;
+        height: 8px;
+  
+        flex-shrink: 0;
+  
+        background: #c6f135;
+  
+        transform: skewX(-11deg);
+      }
+    }
+  
+    // =================================
+    // HEADING
+    // =================================
+  
+    .heading {
+      display: grid;
+  
+      grid-template-columns: 1.35fr 0.65fr;
+  
+      gap: 60px;
+  
+      align-items: end;
+  
+      margin: 24px 0 58px;
+    }
+  
+    .heading h2 {
+      max-width: 12ch;
+  
+      margin: 0;
+  
+      color: #f7f8f4;
+  
+      font-family: "Archivo", sans-serif;
+  
+      font-size: clamp(38px, 5.2vw, 74px);
+  
+      font-weight: 800;
+  
+      line-height: 0.98;
+  
+      letter-spacing: -0.025em;
+  
+      text-transform: uppercase;
+    }
+  
+    .heading p {
+      max-width: 40ch;
+  
+      margin: 0;
+  
+      color: rgba(247, 248, 244, 0.68);
+  
+      font-family: "Inter", sans-serif;
+  
+      font-size: 16px;
+  
+      line-height: 1.6;
+    }
+  
+    // =================================
+    // CARDS
+    // =================================
+  
+    .cards {
+      display: grid;
+  
+      grid-template-columns: repeat(3, 1fr);
+  
+      border-top: 1px solid rgba(247, 248, 244, 0.16);
+  
+      border-bottom: 1px solid rgba(247, 248, 244, 0.16);
+    }
+  
+    .card {
+      position: relative;
+  
+      min-height: 260px;
+  
+      padding: 30px 32px;
+  
+      border-right: 1px solid rgba(247, 248, 244, 0.16);
+  
+      transition:
+        background 0.3s ease;
+  
+      &:last-child {
+        border-right: none;
+      }
+  
+      &:hover {
+        background: rgba(247, 248, 244, 0.035);
+      }
+    }
+  
+    // =================================
+    // NUMBER
+    // =================================
+  
+    .number {
+      display: block;
+  
+      margin-bottom: 42px;
+  
+      color: #c6f135;
+  
+      font-family: "IBM Plex Mono", monospace;
+  
+      font-size: 12px;
+  
+      font-weight: 500;
+  
+      letter-spacing: 0.2em;
+    }
+  
+    // =================================
+    // CARD TITLE
+    // =================================
+  
+    .card h3 {
+      margin: 0 0 14px;
+  
+      color: #f7f8f4;
+  
+      font-family: "Archivo", sans-serif;
+  
+      font-size: clamp(23px, 2vw, 30px);
+  
+      font-weight: 700;
+  
+      line-height: 1;
+  
+      letter-spacing: -0.015em;
+  
+      text-transform: uppercase;
+    }
+  
+    // =================================
+    // CARD DESCRIPTION
+    // =================================
+  
+    .card p {
+      max-width: 34ch;
+  
+      margin: 0;
+  
+      color: rgba(247, 248, 244, 0.62);
+  
+      font-family: "Inter", sans-serif;
+  
+      font-size: 14px;
+  
+      line-height: 1.65;
+    }
+  }
+  
+  // =====================================
+  // TABLET
+  // =====================================
+  
+  @media (max-width: 960px) {
+    .process {
+      padding: 84px 0;
+  
+      .container {
+        padding: 0 32px;
+      }
+  
+      .heading {
+        grid-template-columns: 1fr;
+  
+        gap: 24px;
+  
+        margin-bottom: 48px;
+      }
+  
+      .heading h2 {
+        max-width: 100%;
+  
+        font-size: clamp(42px, 8vw, 64px);
+      }
+  
+      .heading p {
+        max-width: 55ch;
+      }
+  
+      .cards {
+        grid-template-columns: 1fr;
+      }
+  
+      .card {
+        min-height: auto;
+  
+        padding: 28px 0;
+  
+        border-right: none;
+  
+        border-bottom: 1px solid rgba(247, 248, 244, 0.16);
+  
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+  
+      .number {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  
+  // =====================================
+  // MOBILE
+  // =====================================
+  
+  @media (max-width: 560px) {
+    .process {
+      padding: 70px 0;
+  
+      .container {
+        padding: 0 20px;
+      }
+  
+      .eyebrow {
+        font-size: 10px;
+  
+        letter-spacing: 0.2em;
+      }
+  
+      .heading {
+        margin: 20px 0 40px;
+  
+        gap: 22px;
+      }
+  
+      .heading h2 {
+        font-size: clamp(40px, 11vw, 54px);
+  
+        line-height: 0.98;
+      }
+  
+      .heading p {
+        font-size: 15px;
+      }
+  
+      .card {
+        padding: 26px 0;
+      }
+  
+      .number {
+        margin-bottom: 22px;
+  
+        font-size: 10px;
+      }
+  
+      .card h3 {
+        font-size: 24px;
+      }
+  
+      .card p {
+        font-size: 14px;
+      }
+    }
+  }

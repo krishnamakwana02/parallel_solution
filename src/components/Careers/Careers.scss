@@ -1,0 +1,219 @@
+.careers {
+    position: relative;
+  
+    padding: 120px 0;
+  
+    background: #c6f135;
+  
+    color: #101b3c;
+  
+    overflow: hidden;
+  
+    .container {
+      width: 100%;
+      max-width: 1240px;
+  
+      margin: 0 auto;
+  
+      padding: 0 32px;
+    }
+  
+    // =================================
+    // CONTENT
+    // =================================
+  
+    .careers-content {
+      max-width: 900px;
+    }
+  
+    // =================================
+    // EYEBROW
+    // =================================
+  
+    .eyebrow {
+      display: inline-flex;
+  
+      align-items: center;
+  
+      gap: 12px;
+  
+      color: #101b3c;
+  
+      font-family: "IBM Plex Mono", monospace;
+  
+      font-size: 12px;
+  
+      font-weight: 500;
+  
+      letter-spacing: 0.28em;
+  
+      text-transform: uppercase;
+  
+      &::before {
+        content: "";
+  
+        width: 22px;
+        height: 8px;
+  
+        flex-shrink: 0;
+  
+        background: #101b3c;
+  
+        transform: skewX(-11deg);
+      }
+    }
+  
+    // =================================
+    // HEADING
+    // =================================
+  
+    h2 {
+      margin: 24px 0 28px;
+  
+      color: #101b3c;
+  
+      font-family: "Archivo", sans-serif;
+  
+      font-size: clamp(42px, 6vw, 78px);
+  
+      font-weight: 800;
+  
+      line-height: 0.96;
+  
+      letter-spacing: -0.03em;
+  
+      text-transform: uppercase;
+    }
+  
+    // =================================
+    // DESCRIPTION
+    // =================================
+  
+    p {
+      max-width: 58ch;
+  
+      margin: 0 0 38px;
+  
+      color: rgba(16, 27, 60, 0.72);
+  
+      font-family: "Inter", sans-serif;
+  
+      font-size: 16px;
+  
+      line-height: 1.6;
+    }
+  
+    // =================================
+    // BUTTON
+    // =================================
+  
+    .careers-button {
+      display: inline-flex;
+  
+      align-items: center;
+  
+      gap: 14px;
+  
+      padding: 14px 22px;
+  
+      background: #101b3c;
+  
+      color: #f7f8f4;
+  
+      font-family: "IBM Plex Mono", monospace;
+  
+      font-size: 11px;
+  
+      font-weight: 600;
+  
+      letter-spacing: 0.1em;
+  
+      text-decoration: none;
+  
+      text-transform: uppercase;
+  
+      transform: skewX(-11deg);
+  
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        gap 0.3s ease;
+  
+      span,
+      svg {
+        transform: skewX(11deg);
+      }
+  
+      svg {
+        font-size: 12px;
+      }
+  
+      &:hover {
+        background: #f7f8f4;
+  
+        color: #101b3c;
+  
+        gap: 18px;
+      }
+    }
+  }
+  
+  // =====================================
+  // TABLET
+  // =====================================
+  
+  @media (max-width: 960px) {
+    .careers {
+      padding: 84px 0;
+  
+      .container {
+        padding: 0 32px;
+      }
+  
+      h2 {
+        font-size: clamp(44px, 8vw, 66px);
+      }
+    }
+  }
+  
+  // =====================================
+  // MOBILE
+  // =====================================
+  
+  @media (max-width: 560px) {
+    .careers {
+      padding: 70px 0;
+  
+      .container {
+        padding: 0 20px;
+      }
+  
+      .eyebrow {
+        font-size: 10px;
+  
+        letter-spacing: 0.2em;
+      }
+  
+      h2 {
+        margin: 20px 0 24px;
+  
+        font-size: clamp(40px, 11vw, 54px);
+  
+        line-height: 0.97;
+      }
+  
+      p {
+        margin-bottom: 30px;
+  
+        font-size: 15px;
+  
+        line-height: 1.6;
+      }
+  
+      .careers-button {
+        padding: 13px 19px;
+  
+        font-size: 10px;
+      }
+    }
+  }

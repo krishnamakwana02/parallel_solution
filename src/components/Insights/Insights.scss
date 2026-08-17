@@ -1,0 +1,367 @@
+.insights {
+    position: relative;
+  
+    padding: 120px 0;
+  
+    background: #f7f8f4;
+    color: #101b3c;
+  
+    .container {
+      width: 100%;
+      max-width: 1240px;
+  
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+  
+    // =================================
+    // TOP
+    // =================================
+  
+    .top {
+      display: grid;
+  
+      grid-template-columns: 1.35fr 0.65fr;
+  
+      align-items: end;
+  
+      gap: 60px;
+  
+      margin-bottom: 64px;
+    }
+  
+    // =================================
+    // EYEBROW
+    // =================================
+  
+    .eyebrow {
+      display: inline-flex;
+  
+      align-items: center;
+  
+      gap: 12px;
+  
+      color: #5a6178;
+  
+      font-family: "IBM Plex Mono", monospace;
+  
+      font-size: 12px;
+  
+      font-weight: 500;
+  
+      letter-spacing: 0.28em;
+  
+      line-height: 1;
+  
+      text-transform: uppercase;
+  
+      &::before {
+        content: "";
+  
+        width: 22px;
+        height: 8px;
+  
+        flex-shrink: 0;
+  
+        background: #c6f135;
+  
+        transform: skewX(-11deg);
+      }
+    }
+  
+    // =================================
+    // HEADING
+    // =================================
+  
+    .top h2 {
+      max-width: 12ch;
+  
+      margin: 22px 0 0;
+  
+      color: #101b3c;
+  
+      font-family: "Archivo", sans-serif;
+  
+      font-size: clamp(40px, 5.2vw, 74px);
+  
+      font-weight: 800;
+  
+      line-height: 0.96;
+  
+      letter-spacing: -0.025em;
+  
+      text-transform: uppercase;
+    }
+  
+    // =================================
+    // DESCRIPTION
+    // =================================
+  
+    .top > p {
+      max-width: 40ch;
+  
+      margin: 0;
+  
+      color: #5a6178;
+  
+      font-family: "Inter", sans-serif;
+  
+      font-size: 16px;
+  
+      line-height: 1.6;
+    }
+  
+    // =================================
+    // POSTS
+    // =================================
+  
+    .posts {
+      display: grid;
+  
+      grid-template-columns: repeat(3, 1fr);
+  
+      border-top: 1px solid rgba(16, 27, 60, 0.16);
+  
+      border-bottom: 1px solid rgba(16, 27, 60, 0.16);
+    }
+  
+    // =================================
+    // POST
+    // =================================
+  
+    .post {
+      position: relative;
+  
+      min-height: 300px;
+  
+      padding: 30px 32px;
+  
+      display: flex;
+  
+      flex-direction: column;
+  
+      border-right: 1px solid rgba(16, 27, 60, 0.16);
+  
+      transition:
+        background 0.3s ease;
+  
+      &:last-child {
+        border-right: none;
+      }
+  
+      &:hover {
+        background: rgba(16, 27, 60, 0.025);
+      }
+    }
+  
+    // =================================
+    // CATEGORY
+    // =================================
+  
+    .post small {
+      color: #687188;
+  
+      font-family: "IBM Plex Mono", monospace;
+  
+      font-size: 11px;
+  
+      font-weight: 500;
+  
+      letter-spacing: 0.2em;
+  
+      line-height: 1.4;
+  
+      text-transform: uppercase;
+    }
+  
+    // =================================
+    // TITLE
+    // =================================
+  
+    .post h3 {
+      max-width: 18ch;
+  
+      margin: 28px 0;
+  
+      color: #101b3c;
+  
+      font-family: "Archivo", sans-serif;
+  
+      font-size: clamp(23px, 2.4vw, 32px);
+  
+      font-weight: 700;
+  
+      line-height: 1.05;
+  
+      letter-spacing: -0.015em;
+  
+      text-transform: uppercase;
+    }
+  
+    // =================================
+    // READ
+    // =================================
+  
+    .post a {
+      width: fit-content;
+  
+      margin-top: auto;
+  
+      display: inline-flex;
+  
+      align-items: center;
+  
+      gap: 10px;
+  
+      color: #101b3c;
+  
+      font-family: "IBM Plex Mono", monospace;
+  
+      font-size: 11px;
+  
+      font-weight: 600;
+  
+      letter-spacing: 0.12em;
+  
+      text-decoration: none;
+  
+      text-transform: uppercase;
+  
+      transition:
+        color 0.25s ease,
+        gap 0.25s ease;
+  
+      span {
+        font-family: Arial, sans-serif;
+  
+        font-size: 16px;
+  
+        line-height: 1;
+  
+        transition:
+          transform 0.25s ease;
+      }
+  
+      &:hover {
+        color: #5a6178;
+  
+        gap: 14px;
+  
+        span {
+          transform: translate(2px, -2px);
+        }
+      }
+    }
+  }
+  
+  // =====================================
+  // TABLET
+  // =====================================
+  
+  @media (max-width: 960px) {
+    .insights {
+      padding: 84px 0;
+  
+      .container {
+        padding: 0 32px;
+      }
+  
+      .top {
+        grid-template-columns: 1fr;
+  
+        align-items: start;
+  
+        gap: 24px;
+  
+        margin-bottom: 48px;
+      }
+  
+      .top h2 {
+        max-width: 100%;
+  
+        font-size: clamp(42px, 8vw, 64px);
+      }
+  
+      .top > p {
+        max-width: 55ch;
+      }
+  
+      .posts {
+        grid-template-columns: 1fr;
+      }
+  
+      .post {
+        min-height: auto;
+  
+        padding: 28px 0;
+  
+        border-right: none;
+  
+        border-bottom: 1px solid rgba(16, 27, 60, 0.16);
+  
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+  
+      .post h3 {
+        max-width: 30ch;
+      }
+    }
+  }
+  
+  // =====================================
+  // MOBILE
+  // =====================================
+  
+  @media (max-width: 560px) {
+    .insights {
+      padding: 70px 0;
+  
+      .container {
+        padding: 0 20px;
+      }
+  
+      .eyebrow {
+        font-size: 10px;
+  
+        letter-spacing: 0.2em;
+      }
+  
+      .top {
+        gap: 22px;
+  
+        margin-bottom: 38px;
+      }
+  
+      .top h2 {
+        margin-top: 18px;
+  
+        font-size: clamp(40px, 11vw, 54px);
+  
+        line-height: 0.98;
+      }
+  
+      .top > p {
+        font-size: 15px;
+      }
+  
+      .post {
+        padding: 25px 0;
+      }
+  
+      .post small {
+        font-size: 10px;
+      }
+  
+      .post h3 {
+        margin: 20px 0;
+  
+        font-size: 24px;
+      }
+  
+      .post a {
+        font-size: 10px;
+      }
+    }
+  }

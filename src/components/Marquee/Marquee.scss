@@ -1,0 +1,129 @@
+.marquee {
+    width: 100%;
+  
+    background: #c6f135;
+    color: #101b3c;
+  
+    overflow: hidden;
+  
+    padding: 18px 0;
+  
+    border-top: 3px solid #101b3c;
+    border-bottom: 3px solid #101b3c;
+  
+    white-space: nowrap;
+  
+    .track {
+      display: flex;
+  
+      width: max-content;
+  
+      gap: 52px;
+  
+      animation: marquee-scroll 30s linear infinite;
+  
+      will-change: transform;
+    }
+  
+    span {
+      position: relative;
+  
+      display: flex;
+      align-items: center;
+  
+      gap: 52px;
+  
+      flex-shrink: 0;
+  
+      font-family: "Archivo", sans-serif;
+  
+      font-size: 22px;
+      font-weight: 800;
+  
+      line-height: 1;
+  
+      letter-spacing: 0.01em;
+  
+      text-transform: uppercase;
+  
+      &::after {
+        content: "／";
+  
+        color: #101b3c;
+  
+        opacity: 0.45;
+  
+        font-weight: 800;
+      }
+    }
+  }
+  
+  // --------------------------------
+  // ANIMATION
+  // --------------------------------
+  
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  // --------------------------------
+  // TABLET
+  // --------------------------------
+  
+  @media (max-width: 768px) {
+    .marquee {
+      padding: 16px 0;
+  
+      .track {
+        gap: 36px;
+  
+        animation-duration: 25s;
+      }
+  
+      span {
+        gap: 36px;
+  
+        font-size: 18px;
+      }
+    }
+  }
+  
+  // --------------------------------
+  // MOBILE
+  // --------------------------------
+  
+  @media (max-width: 480px) {
+    .marquee {
+      padding: 15px 0;
+  
+      .track {
+        gap: 28px;
+  
+        animation-duration: 22s;
+      }
+  
+      span {
+        gap: 28px;
+  
+        font-size: 16px;
+      }
+    }
+  }
+  
+  // --------------------------------
+  // REDUCED MOTION
+  // --------------------------------
+  
+  @media (prefers-reduced-motion: reduce) {
+    .marquee {
+      .track {
+        animation: none;
+      }
+    }
+  }
