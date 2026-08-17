@@ -1,18 +1,18 @@
 const data = [
   {
     id: 1,
-    category: "Strategy",
-    title: "Why brands need a sharper point of view",
+    category: "Media",
+    title: "Why running content and media in parallel beats sequencing them",
   },
   {
     id: 2,
-    category: "Content",
-    title: "Content that actually earns attention",
+    category: "Craft",
+    title: "The 3-second rule: making an idea survive the scroll",
   },
   {
     id: 3,
-    category: "Performance",
-    title: "Creative and media should never work apart",
+    category: "Growth",
+    title: "From attention to outcome: measuring what actually moves",
   },
 ];
 

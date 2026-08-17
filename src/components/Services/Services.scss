@@ -1,144 +1,277 @@
-.services{
-
-    padding-bottom:140px;
-    
-    background:white;
-    
-    .container{
-    
-    width:90%;
-    
-    margin:auto;
-    
-    display:grid;
-    
-    grid-template-columns:repeat(3,1fr);
-    
-    border-top:1px solid #e2e2e2;
-    
+.services {
+    position: relative;
+  
+    width: 100%;
+    background: #ffffff;
+    color: #101b3c;
+  
+    padding: 0 0 100px;
+  
+    overflow: hidden;
+  
+    // ==========================================
+    // CONTAINER
+    // ==========================================
+  
+    .container {
+      width: calc(100% - 40px);
+      max-width: 1000px;
+  
+      margin: 0 auto;
+  
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+  
+      border-top: 1px solid rgba(16, 27, 60, 0.14);
+      border-bottom: 1px solid rgba(16, 27, 60, 0.14);
     }
-    
-    .card{
-    
-    padding:70px 45px;
-    
-    border-right:1px solid #e2e2e2;
-    
-    transition:.4s;
-    
+  
+    // ==========================================
+    // CARD
+    // ==========================================
+  
+    .card {
+      min-width: 0;
+  
+      padding: 37px 28px 34px;
+  
+      border-right: 1px solid rgba(16, 27, 60, 0.14);
+  
+      &:last-child {
+        border-right: none;
+      }
     }
-    
-    .card:last-child{
-    
-    border-right:none;
-    
+  
+    // ==========================================
+    // SLASH
+    // ==========================================
+  
+    .line {
+      width: 9px;
+      height: 45px;
+  
+      margin: 0 0 19px 1px;
+  
+      background: #101b3c;
+  
+      transform: skewX(-11deg);
     }
-    
-    .card:hover{
-    
-    background:#07163d;
-    
-    color:white;
-    
-    transform:translateY(-10px);
-    
+  
+    .card-1 .line {
+      background: #c6f135;
     }
-    
-    .line{
-    
-    width:8px;
-    
-    height:70px;
-    
-    background:#d8ff23;
-    
-    margin-bottom:35px;
-    
+  
+    .card-2 .line {
+      background: #101b3c;
     }
-    
-    .card h3{
-    
-    font-size:42px;
-    
-    margin-bottom:20px;
-    
+  
+    // ==========================================
+    // TITLE
+    // ==========================================
+  
+    .card h3 {
+      margin: 0;
+  
+      color: #101b3c;
+  
+      font-family: "Archivo", sans-serif;
+  
+      font-size: 24px;
+      font-weight: 800;
+  
+      line-height: 1;
+      letter-spacing: -0.025em;
+  
+      text-transform: uppercase;
     }
-    
-    .card p{
-    
-    font-size:20px;
-    
-    line-height:1.8;
-    
-    color:#70798d;
-    
+  
+    // ==========================================
+    // DESCRIPTION
+    // ==========================================
+  
+    .card p {
+      max-width: 31ch;
+  
+      margin: 14px 0 0;
+  
+      color: #5a6178;
+  
+      font-family: "Inter", sans-serif;
+  
+      font-size: 14px;
+      font-weight: 400;
+  
+      line-height: 1.55;
     }
-    
-    .card:hover p{
-    
-    color:#d5d8e5;
-    
+  
+    // ==========================================
+    // LIST
+    // ==========================================
+  
+    .card ul {
+      margin: 24px 0 0;
+      padding: 0;
+  
+      list-style: none;
     }
-    
-    ul{
-    
-    margin-top:35px;
-    
-    padding:0;
-    
-    list-style:none;
-    
+  
+    // ==========================================
+    // LIST ITEM
+    // ==========================================
+  
+    .card li {
+      position: relative;
+  
+      margin: 0 0 13px;
+      padding-left: 19px;
+  
+      color: #101b3c;
+  
+      font-family: "IBM Plex Mono", monospace;
+  
+      font-size: 12px;
+      font-weight: 400;
+  
+      line-height: 1.4;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+  
+      &::before {
+        content: "";
+  
+        position: absolute;
+  
+        left: 0;
+        top: 6px;
+  
+        width: 12px;
+        height: 5px;
+  
+        background: #c6f135;
+  
+        transform: skewX(-11deg);
+      }
     }
-    
-    li{
-    
-    margin-bottom:18px;
-    
-    font-size:18px;
-    
-    position:relative;
-    
-    padding-left:20px;
-    
+  }
+  
+  // ==========================================
+  // TABLET
+  // ==========================================
+  
+  @media (max-width: 960px) {
+    .services {
+      padding-bottom: 80px;
+  
+      .container {
+        width: calc(100% - 64px);
+        max-width: 1000px;
+      }
+  
+      .card {
+        padding: 40px 28px 38px;
+      }
+  
+      .card h3 {
+        font-size: 22px;
+      }
+  
+      .card p {
+        font-size: 14px;
+      }
+  
+      .card li {
+        font-size: 12px;
+      }
     }
-    
-    li::before{
-    
-    content:"";
-    
-    position:absolute;
-    
-    left:0;
-    
-    top:12px;
-    
-    width:10px;
-    
-    height:3px;
-    
-    background:#d8ff23;
-    
+  }
+  
+  // ==========================================
+  // MOBILE
+  // ==========================================
+  
+  @media (max-width: 700px) {
+    .services {
+      padding-bottom: 60px;
+  
+      .container {
+        width: calc(100% - 40px);
+  
+        grid-template-columns: 1fr;
+  
+        border-bottom: none;
+      }
+  
+      .card {
+        padding: 38px 24px 40px;
+  
+        border-right: none;
+        border-bottom: 1px solid rgba(16, 27, 60, 0.14);
+  
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+  
+      .line {
+        width: 8px;
+        height: 42px;
+  
+        margin-bottom: 18px;
+      }
+  
+      .card h3 {
+        font-size: 27px;
+      }
+  
+      .card p {
+        max-width: 50ch;
+  
+        margin-top: 15px;
+  
+        font-size: 15px;
+        line-height: 1.6;
+      }
+  
+      .card ul {
+        margin-top: 25px;
+      }
+  
+      .card li {
+        margin-bottom: 14px;
+  
+        padding-left: 20px;
+  
+        font-size: 12px;
+      }
     }
-    
+  }
+  
+  // ==========================================
+  // SMALL MOBILE
+  // ==========================================
+  
+  @media (max-width: 380px) {
+    .services {
+      .container {
+        width: calc(100% - 32px);
+      }
+  
+      .card {
+        padding: 34px 20px 36px;
+      }
+  
+      .card h3 {
+        font-size: 25px;
+      }
+  
+      .card p {
+        font-size: 14px;
+      }
+  
+      .card li {
+        font-size: 11px;
+      }
     }
-    
-    @media(max-width:992px){
-    
-    .services{
-    
-    .container{
-    
-    grid-template-columns:1fr;
-    
-    }
-    
-    .card{
-    
-    border-right:none;
-    
-    border-bottom:1px solid #e2e2e2;
-    
-    }
-    
-    }
-    }
+  }

@@ -1,367 +1,405 @@
 .insights {
-    position: relative;
-  
-    padding: 120px 0;
-  
-    background: #f7f8f4;
+  position: relative;
+
+  width: 100%;
+  max-width: 100vw;
+
+  padding: 115px 0 110px;
+
+  background: #ffffff;
+  color: #101b3c;
+
+  overflow: hidden;
+
+  // ==========================================
+  // CONTAINER
+  // ==========================================
+
+  .container {
+    width: calc(100% - 40px);
+    max-width: 1075px;
+
+    margin: 0 auto;
+  }
+
+  // ==========================================
+  // TOP
+  // ==========================================
+
+  .top {
+    display: grid;
+
+    grid-template-columns: 1fr 0.55fr;
+
+    align-items: end;
+
+    column-gap: 65px;
+
+    margin-bottom: 62px;
+  }
+
+  // ==========================================
+  // HEADING WRAPPER
+  // ==========================================
+
+  .heading-wrap {
+    min-width: 0;
+  }
+
+  // ==========================================
+  // EYEBROW
+  // ==========================================
+
+  .eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    color: #5a6178;
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: 0.28em;
+
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+
+      width: 20px;
+      height: 7px;
+
+      flex-shrink: 0;
+
+      background: #c6f135;
+
+      transform: skewX(-11deg);
+    }
+  }
+
+  // ==========================================
+  // MAIN HEADING
+  // ==========================================
+
+  h2 {
+    margin: 27px 0 0;
+
     color: #101b3c;
-  
-    .container {
-      width: 100%;
-      max-width: 1240px;
-  
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-  
-    // =================================
-    // TOP
-    // =================================
-  
-    .top {
-      display: grid;
-  
-      grid-template-columns: 1.35fr 0.65fr;
-  
-      align-items: end;
-  
-      gap: 60px;
-  
-      margin-bottom: 64px;
-    }
-  
-    // =================================
-    // EYEBROW
-    // =================================
-  
-    .eyebrow {
-      display: inline-flex;
-  
-      align-items: center;
-  
-      gap: 12px;
-  
-      color: #5a6178;
-  
-      font-family: "IBM Plex Mono", monospace;
-  
-      font-size: 12px;
-  
-      font-weight: 500;
-  
-      letter-spacing: 0.28em;
-  
+
+    font-family: "Archivo", sans-serif;
+
+    font-size: 66px;
+    font-weight: 800;
+
+    line-height: 0.94;
+
+    letter-spacing: -0.035em;
+
+    text-transform: uppercase;
+  }
+
+  // ==========================================
+  // INTRO TEXT
+  // ==========================================
+
+  .intro-text {
+    max-width: 36ch;
+
+    margin: 0 0 0 auto;
+
+    color: #687188;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.65;
+  }
+
+  // ==========================================
+  // POSTS
+  // ==========================================
+
+  .posts {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 26px;
+  }
+
+  // ==========================================
+  // POST
+  // ==========================================
+
+  .post {
+    min-width: 0;
+
+    padding: 23px 0 0;
+
+    border-top: 2px solid #101b3c;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 145px;
+  }
+
+  // ==========================================
+  // CATEGORY
+  // ==========================================
+
+  .post small {
+    color: #687188;
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+  }
+
+  // ==========================================
+  // TITLE
+  // ==========================================
+
+  .post h3 {
+    max-width: 31ch;
+
+    margin: 18px 0 0;
+
+    color: #101b3c;
+
+    font-family: "Archivo", sans-serif;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.02em;
+  }
+
+  // ==========================================
+  // READ LINK
+  // ==========================================
+
+  .post a {
+    width: fit-content;
+
+    margin-top: 15px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #101b3c;
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition:
+      color 0.2s ease,
+      gap 0.2s ease;
+
+    span {
+      color: #789c3b;
+
+      font-size: 13px;
+
       line-height: 1;
-  
-      text-transform: uppercase;
-  
-      &::before {
-        content: "";
-  
-        width: 22px;
-        height: 8px;
-  
-        flex-shrink: 0;
-  
-        background: #c6f135;
-  
-        transform: skewX(-11deg);
-      }
+
+      transition: transform 0.2s ease;
     }
-  
-    // =================================
-    // HEADING
-    // =================================
-  
-    .top h2 {
-      max-width: 12ch;
-  
-      margin: 22px 0 0;
-  
-      color: #101b3c;
-  
-      font-family: "Archivo", sans-serif;
-  
-      font-size: clamp(40px, 5.2vw, 74px);
-  
-      font-weight: 800;
-  
-      line-height: 0.96;
-  
-      letter-spacing: -0.025em;
-  
-      text-transform: uppercase;
-    }
-  
-    // =================================
-    // DESCRIPTION
-    // =================================
-  
-    .top > p {
-      max-width: 40ch;
-  
-      margin: 0;
-  
-      color: #5a6178;
-  
-      font-family: "Inter", sans-serif;
-  
-      font-size: 16px;
-  
-      line-height: 1.6;
-    }
-  
-    // =================================
-    // POSTS
-    // =================================
-  
-    .posts {
-      display: grid;
-  
-      grid-template-columns: repeat(3, 1fr);
-  
-      border-top: 1px solid rgba(16, 27, 60, 0.16);
-  
-      border-bottom: 1px solid rgba(16, 27, 60, 0.16);
-    }
-  
-    // =================================
-    // POST
-    // =================================
-  
-    .post {
-      position: relative;
-  
-      min-height: 300px;
-  
-      padding: 30px 32px;
-  
-      display: flex;
-  
-      flex-direction: column;
-  
-      border-right: 1px solid rgba(16, 27, 60, 0.16);
-  
-      transition:
-        background 0.3s ease;
-  
-      &:last-child {
-        border-right: none;
-      }
-  
-      &:hover {
-        background: rgba(16, 27, 60, 0.025);
-      }
-    }
-  
-    // =================================
-    // CATEGORY
-    // =================================
-  
-    .post small {
+
+    &:hover {
       color: #687188;
-  
-      font-family: "IBM Plex Mono", monospace;
-  
-      font-size: 11px;
-  
-      font-weight: 500;
-  
-      letter-spacing: 0.2em;
-  
-      line-height: 1.4;
-  
-      text-transform: uppercase;
-    }
-  
-    // =================================
-    // TITLE
-    // =================================
-  
-    .post h3 {
-      max-width: 18ch;
-  
-      margin: 28px 0;
-  
-      color: #101b3c;
-  
-      font-family: "Archivo", sans-serif;
-  
-      font-size: clamp(23px, 2.4vw, 32px);
-  
-      font-weight: 700;
-  
-      line-height: 1.05;
-  
-      letter-spacing: -0.015em;
-  
-      text-transform: uppercase;
-    }
-  
-    // =================================
-    // READ
-    // =================================
-  
-    .post a {
-      width: fit-content;
-  
-      margin-top: auto;
-  
-      display: inline-flex;
-  
-      align-items: center;
-  
+
       gap: 10px;
-  
-      color: #101b3c;
-  
-      font-family: "IBM Plex Mono", monospace;
-  
-      font-size: 11px;
-  
-      font-weight: 600;
-  
-      letter-spacing: 0.12em;
-  
-      text-decoration: none;
-  
-      text-transform: uppercase;
-  
-      transition:
-        color 0.25s ease,
-        gap 0.25s ease;
-  
+
       span {
-        font-family: Arial, sans-serif;
-  
-        font-size: 16px;
-  
-        line-height: 1;
-  
-        transition:
-          transform 0.25s ease;
-      }
-  
-      &:hover {
-        color: #5a6178;
-  
-        gap: 14px;
-  
-        span {
-          transform: translate(2px, -2px);
-        }
+        transform: translateX(2px);
       }
     }
   }
-  
-  // =====================================
-  // TABLET
-  // =====================================
-  
-  @media (max-width: 960px) {
-    .insights {
-      padding: 84px 0;
-  
-      .container {
-        padding: 0 32px;
-      }
-  
-      .top {
-        grid-template-columns: 1fr;
-  
-        align-items: start;
-  
-        gap: 24px;
-  
-        margin-bottom: 48px;
-      }
-  
-      .top h2 {
-        max-width: 100%;
-  
-        font-size: clamp(42px, 8vw, 64px);
-      }
-  
-      .top > p {
-        max-width: 55ch;
-      }
-  
-      .posts {
-        grid-template-columns: 1fr;
-      }
-  
-      .post {
-        min-height: auto;
-  
-        padding: 28px 0;
-  
-        border-right: none;
-  
-        border-bottom: 1px solid rgba(16, 27, 60, 0.16);
-  
-        &:last-child {
-          border-bottom: none;
-        }
-      }
-  
-      .post h3 {
-        max-width: 30ch;
-      }
+}
+
+// ==================================================
+// LARGE DESKTOP
+// ==================================================
+
+@media (min-width: 1500px) {
+  .insights {
+    .container {
+      max-width: 1075px;
+    }
+
+    h2 {
+      font-size: 66px;
     }
   }
-  
-  // =====================================
-  // MOBILE
-  // =====================================
-  
-  @media (max-width: 560px) {
-    .insights {
-      padding: 70px 0;
-  
-      .container {
-        padding: 0 20px;
-      }
-  
-      .eyebrow {
-        font-size: 10px;
-  
-        letter-spacing: 0.2em;
-      }
-  
-      .top {
-        gap: 22px;
-  
-        margin-bottom: 38px;
-      }
-  
-      .top h2 {
-        margin-top: 18px;
-  
-        font-size: clamp(40px, 11vw, 54px);
-  
-        line-height: 0.98;
-      }
-  
-      .top > p {
-        font-size: 15px;
-      }
-  
-      .post {
-        padding: 25px 0;
-      }
-  
-      .post small {
-        font-size: 10px;
-      }
-  
-      .post h3 {
-        margin: 20px 0;
-  
-        font-size: 24px;
-      }
-  
-      .post a {
-        font-size: 10px;
-      }
+}
+
+// ==================================================
+// TABLET
+// ==================================================
+
+@media (max-width: 960px) {
+  .insights {
+    padding: 90px 0;
+
+    .container {
+      width: calc(100% - 64px);
+
+      max-width: 900px;
+    }
+
+    .top {
+      grid-template-columns: 1fr 0.7fr;
+
+      column-gap: 40px;
+
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: clamp(48px, 7vw, 62px);
+    }
+
+    .intro-text {
+      font-size: 14px;
+    }
+
+    .posts {
+      column-gap: 22px;
+    }
+
+    .post h3 {
+      font-size: 17px;
     }
   }
+}
+
+// ==================================================
+// MOBILE
+// ==================================================
+
+@media (max-width: 700px) {
+  .insights {
+    padding: 75px 0;
+
+    .container {
+      width: calc(100% - 40px);
+
+      max-width: none;
+    }
+
+    .top {
+      grid-template-columns: 1fr;
+
+      gap: 28px;
+
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      margin-top: 22px;
+
+      font-size: clamp(44px, 13vw, 58px);
+
+      line-height: 0.95;
+    }
+
+    .intro-text {
+      max-width: 50ch;
+
+      margin: 0;
+
+      font-size: 14px;
+    }
+
+    .posts {
+      grid-template-columns: 1fr;
+
+      row-gap: 0;
+    }
+
+    .post {
+      min-height: auto;
+
+      padding: 25px 0 28px;
+
+      border-top: 1px solid rgba(16, 27, 60, 0.25);
+    }
+
+    .post:first-child {
+      border-top: 2px solid #101b3c;
+    }
+
+    .post h3 {
+      max-width: 32ch;
+
+      margin-top: 16px;
+
+      font-size: 20px;
+    }
+
+    .post a {
+      margin-top: 16px;
+    }
+  }
+}
+
+// ==================================================
+// SMALL MOBILE
+// ==================================================
+
+@media (max-width: 380px) {
+  .insights {
+    padding: 65px 0;
+
+    .container {
+      width: calc(100% - 32px);
+    }
+
+    .eyebrow {
+      font-size: 9px;
+
+      letter-spacing: 0.22em;
+    }
+
+    h2 {
+      font-size: 43px;
+    }
+
+    .intro-text {
+      font-size: 13px;
+    }
+
+    .post h3 {
+      font-size: 18px;
+    }
+  }
+}

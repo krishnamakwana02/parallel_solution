@@ -6,8 +6,10 @@ export default function Insights() {
     <section id="insights" className="insights">
       <div className="container">
 
+        {/* ================= TOP ================= */}
+
         <div className="top">
-          <div>
+          <div className="heading-wrap">
             <span className="eyebrow">Insights</span>
 
             <h2>
@@ -17,22 +19,24 @@ export default function Insights() {
             </h2>
           </div>
 
-          <p>
-            Thoughts on branding, content, advertising, marketing,
-            strategy, performance and creativity.
+          <p className="intro-text">
+            Points of view on content, media and the state of the brief —
+            replace with your own posts.
           </p>
         </div>
 
+        {/* ================= POSTS ================= */}
+
         <div className="posts">
-          {data.map((post, index) => (
-            <article className="post" key={post.id ?? index}>
+          {data.map((post) => (
+            <article className="post" key={post.id}>
               <small>{post.category}</small>
 
               <h3>{post.title}</h3>
 
               <a href="#contact">
                 Read
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true">→</span>
               </a>
             </article>
           ))}

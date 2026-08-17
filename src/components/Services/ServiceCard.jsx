@@ -1,43 +1,22 @@
 export default function ServiceCard({
-
     title,
-    
     description,
-    
-    list
-    
-    }){
-    
-    return(
-    
-    <div className="card">
-    
-    <div className="line"/>
-    
-    <h3>{title}</h3>
-    
-    <p>
-    
-    {description}
-    
-    </p>
-    
-    <ul>
-    
-    {
-    
-    list.map((item,index)=>(
-    
-    <li key={index}>{item}</li>
-    
-    ))
-    
-    }
-    
-    </ul>
-    
-    </div>
-    
-    )
-    
-    }
+    list,
+    index,
+  }) {
+    return (
+      <article className={`card card-${index}`}>
+        <div className="line" aria-hidden="true" />
+  
+        <h3>{title}</h3>
+  
+        <p>{description}</p>
+  
+        <ul>
+          {list.map((item, itemIndex) => (
+            <li key={itemIndex}>{item}</li>
+          ))}
+        </ul>
+      </article>
+    );
+  }

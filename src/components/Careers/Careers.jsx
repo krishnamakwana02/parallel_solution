@@ -1,34 +1,32 @@
 import "./Careers.scss";
-import { FaArrowRight } from "react-icons/fa6";
 
 export default function Careers() {
   return (
     <section id="careers" className="careers">
-      <div className="container">
+      <div className="careers-container">
 
-        <div className="careers-content">
+        <span className="careers-eyebrow">
+          Careers
+        </span>
 
-          <span className="eyebrow">
-            Join us
-          </span>
+        <div className="careers-main">
 
-          <h2>
-            Great work
-            <br />
-            needs great
-            <br />
-            people.
-          </h2>
+          <div className="careers-copy">
+            <h2>
+              WANT TO BUILD
+              <br />
+              WORK THAT MOVES?
+            </h2>
 
-          <p>
-            We’re always looking for strategists, designers,
-            writers, marketers and developers who love solving
-            meaningful problems.
-          </p>
+            <p>
+              We're always looking for writers, art directors, strategists
+              <br className="desktop-break" />
+              and media minds who like to work in parallel.
+            </p>
+          </div>
 
           <a href="#contact" className="careers-button">
-            <span>View careers</span>
-            <FaArrowRight />
+            <span>See open roles</span>
           </a>
 
         </div>
