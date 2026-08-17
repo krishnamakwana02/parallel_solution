@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="hero" id="top">
-      {/* Background video */}
-      <div className="hero-media">
+
+      {/* ================================
+          BACKGROUND VIDEO
+      ================================= */}
+      <div className="hero-media" aria-hidden="true">
         <video
           autoPlay
           muted
@@ -17,7 +20,9 @@ export default function Hero() {
         </video>
       </div>
 
-      {/* Animated brand bars */}
+      {/* ================================
+          BACKGROUND PARALLEL BARS
+      ================================= */}
       <div className="bars" aria-hidden="true">
         <i></i>
         <i></i>
@@ -26,23 +31,33 @@ export default function Hero() {
         <i></i>
       </div>
 
-      {/* Dark gradient */}
-      <div className="hero-grad" />
+      {/* ================================
+          DARK OVERLAY
+      ================================= */}
+      <div className="hero-grad" aria-hidden="true" />
 
+      {/* ================================
+          MAIN CONTENT
+      ================================= */}
       <div className="container">
         <div className="hero-content">
 
+          {/* KICKER */}
           <motion.div
             className="hero-kicker"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{
+              duration: 0.7,
+              ease: [0.16, 1, 0.3, 1],
+            }}
           >
             <span className="eyebrow">
               Content · Advertising · Marketing
             </span>
           </motion.div>
 
+          {/* HEADING */}
           <motion.h1
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,6 +71,7 @@ export default function Hero() {
             moving in <span>parallel.</span>
           </motion.h1>
 
+          {/* DESCRIPTION */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,6 +86,7 @@ export default function Hero() {
             loses momentum.
           </motion.p>
 
+          {/* BUTTONS */}
           <motion.div
             className="buttons"
             initial={{ opacity: 0, y: 25 }}
@@ -77,6 +94,7 @@ export default function Hero() {
             transition={{
               duration: 0.7,
               delay: 0.4,
+              ease: [0.16, 1, 0.3, 1],
             }}
           >
             <a href="#work" className="btn">
@@ -87,12 +105,16 @@ export default function Hero() {
               <span>Start a project</span>
             </a>
           </motion.div>
+
         </div>
       </div>
 
-      {/* Bottom information */}
+      {/* ================================
+          BOTTOM INFORMATION
+      ================================= */}
       <div className="hero-foot">
         <div className="container">
+
           <div className="cell">
             Est. India · <b>Available worldwide</b>
           </div>
@@ -102,10 +124,12 @@ export default function Hero() {
           </div>
 
           <div className="scrollcue">
-            Scroll
+            Scroll <span></span>
           </div>
+
         </div>
       </div>
+
     </section>
   );
 }

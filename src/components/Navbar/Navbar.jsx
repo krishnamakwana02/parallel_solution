@@ -13,7 +13,9 @@ export default function Navbar() {
 
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -27,22 +29,31 @@ export default function Navbar() {
   return (
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="container">
+
         {/* Logo */}
-        <a href="#top" className="logo" onClick={closeMenu}>
-          <span className="mark">
+        <a
+          href="#top"
+          className="logo"
+          onClick={closeMenu}
+          aria-label="Parallel Solutions Home"
+        >
+          <span className="mark" aria-hidden="true">
             <i></i>
             <i></i>
             <i></i>
           </span>
 
           <span className="logo-text">
-            <strong>PARALLEL</strong>
-            <small>SOLUTIONS</small>
+            <strong>Parallel</strong>
+            <small>Solutions</small>
           </span>
         </a>
 
-        {/* Desktop Navigation */}
-        <nav className={menuOpen ? "open" : ""}>
+        {/* Navigation */}
+        <nav
+          className={menuOpen ? "open" : ""}
+          aria-label="Main navigation"
+        >
           <a href="#work" onClick={closeMenu}>
             Work
           </a>
@@ -68,20 +79,26 @@ export default function Navbar() {
           </a>
         </nav>
 
-        {/* CTA */}
-        <a href="#contact" className="nav-btn">
+        {/* Desktop CTA */}
+        <a
+          href="#contact"
+          className="nav-btn"
+          onClick={closeMenu}
+        >
           <span>Start a project</span>
         </a>
 
-        {/* Mobile */}
+        {/* Mobile Menu */}
         <button
+          type="button"
           className={`mobile ${menuOpen ? "active" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
           <HiOutlineMenuAlt3 />
         </button>
+
       </div>
     </header>
   );
