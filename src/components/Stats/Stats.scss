@@ -1,83 +1,186 @@
-.stats{
-
-    background:#07163d;
-    
-    padding:100px 0;
-    
-    .container{
-    
-    width:90%;
-    
-    margin:auto;
-    
-    display:grid;
-    
-    grid-template-columns:repeat(4,1fr);
-    
-    gap:40px;
-    
+.stats {
+    position: relative;
+  
+    width: 100%;
+    max-width: 100vw;
+  
+    padding: 0 0 86px;
+  
+    background: #101b3c;
+    color: #f7f8f4;
+  
+    overflow: hidden;
+  
+    // ==========================================
+    // CONTAINER
+    // ==========================================
+  
+    .stats-container {
+      width: 100%;
+      max-width: 1240px;
+  
+      margin: 0 auto;
+      padding: 0 32px;
+  
+      box-sizing: border-box;
+  
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+  
+      gap: 40px;
     }
-    
-    .item{
-    
-    text-align:center;
-    
+  
+    // ==========================================
+    // STAT ITEM
+    // ==========================================
+  
+    .stat-item {
+      min-width: 0;
+      text-align: left;
     }
-    
-    .item h2{
-    
-    font-size:110px;
-    
-    color:#d7ff20;
-    
+  
+    // ==========================================
+    // NUMBER
+    // ==========================================
+  
+    .stat-item h2 {
+      display: inline-block;
+  
+      margin: 0;
+      padding: 0;
+  
+      color: #c6f135;
+  
+      font-family: "Archivo", sans-serif;
+  
+      font-size: clamp(56px, 5vw, 72px);
+      font-weight: 800;
+  
+      line-height: 0.9;
+  
+      letter-spacing: -0.055em;
+  
+      text-transform: none;
+  
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        padding 0.25s ease;
     }
-    
-    .item p{
-    
-    margin-top:20px;
-    
-    letter-spacing:3px;
-    
-    text-transform:uppercase;
-    
-    color:white;
-    
-    line-height:1.7;
-    
+  
+    // ==========================================
+    // HOVER
+    // ==========================================
+  
+    .stat-item:hover h2 {
+      padding: 6px 8px;
+  
+      background: #c6f135;
+      color: #101b3c;
     }
-    
+  
+    // ==========================================
+    // LABEL
+    // ==========================================
+  
+    .stat-item p {
+      margin: 18px 0 0;
+  
+      color: rgba(247, 248, 244, 0.62);
+  
+      font-family: "IBM Plex Mono", monospace;
+  
+      font-size: 11px;
+      font-weight: 500;
+  
+      line-height: 1.45;
+  
+      letter-spacing: 0.18em;
+  
+      text-transform: uppercase;
     }
-    
-    @media(max-width:992px){
-    
-    .stats{
-    
-    .container{
-    
-    grid-template-columns:repeat(2,1fr);
-    
+  }
+  
+  // ==========================================
+  // TABLET
+  // ==========================================
+  
+  @media (max-width: 960px) {
+    .stats {
+      padding: 0 0 70px;
+  
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+  
+        gap: 48px 40px;
+  
+        padding: 0 32px;
+      }
+  
+      .stat-item h2 {
+        font-size: 64px;
+      }
     }
-    
+  }
+  
+  // ==========================================
+  // MOBILE
+  // ==========================================
+  
+  @media (max-width: 560px) {
+    .stats {
+      padding: 0 0 60px;
+  
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+  
+        gap: 42px 24px;
+  
+        padding: 0 20px;
+      }
+  
+      .stat-item h2 {
+        font-size: clamp(48px, 15vw, 62px);
+      }
+  
+      .stat-item p {
+        margin-top: 14px;
+  
+        font-size: 9px;
+  
+        line-height: 1.5;
+  
+        letter-spacing: 0.14em;
+      }
+  
+      .stat-item:hover h2 {
+        padding: 4px 6px;
+      }
     }
-    
+  }
+  
+  // ==========================================
+  // SMALL MOBILE
+  // ==========================================
+  
+  @media (max-width: 380px) {
+    .stats {
+      padding-bottom: 50px;
+  
+      .stats-container {
+        gap: 36px 18px;
+  
+        padding: 0 16px;
+      }
+  
+      .stat-item h2 {
+        font-size: 46px;
+      }
+  
+      .stat-item p {
+        font-size: 8px;
+  
+        letter-spacing: 0.11em;
+      }
     }
-    
-    @media(max-width:600px){
-    
-    .stats{
-    
-    .container{
-    
-    grid-template-columns:1fr;
-    
-    }
-    
-    .item h2{
-    
-    font-size:70px;
-    
-    }
-    
-    }
-    
-    }
+  }
