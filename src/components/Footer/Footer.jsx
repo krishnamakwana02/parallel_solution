@@ -10,7 +10,7 @@ export default function Footer() {
 
           {/* LOGO */}
           <div className="footer-brand">
-            <a href="#" className="footer-logo">
+            <a href="/" className="footer-logo">
               <span className="logo-mark">
                 <i></i>
                 <i></i>
